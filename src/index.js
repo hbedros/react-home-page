@@ -1,8 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Header from './components/common/Header.js';
+import Footer from './components/common/Footer.js';
+import List from './components/list/List.js'
 import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+const App = () => {
+    return (
+    <div>
+    <Header />
+    {/* <List /> */}
+    <Footer />
+    </div>
+    );
+}
+
+ReactDOM.render(
+    <App />,
+    document.getElementById('root')
+);

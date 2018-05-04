@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Header from './components/common/Header.js';
 import Footer from './components/common/Footer.js';
-import NavBar from './nav/Navbar.js';
+import NavBar from './components/common/NavBar.js';
 import './index.css';
 
 const navLinks = [

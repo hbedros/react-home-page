@@ -1,8 +1,12 @@
 import React from 'react';
 import NavItem from './NavItem.js';
 
-const NavBar = React.createClass({
+
+const NavBar = createReactClass({
     render: function() {
+
+        const titleStyle= {};
+        const linkStyle= {};
 
         const navStyle = {
             WebkitBoxShadow: "0 0 4px rgba(0,0,0,0.4)",
@@ -17,8 +21,11 @@ const NavBar = React.createClass({
         if (this.props.titleColor)
             titleStyle.color= this.props.titleColor;
 
+        if (this.props.titleColor)
+            linkStyle.color= this.props.linkColor;
+
         const createLinkItem= function(item, index) {
-            return <NavItem key= {item.title + index} href= {item.href} title= {item.title} />;
+            return <NavItem aStyle= {linkStyle} key= {item.title + index} href= {item.href} title= {item.title} />;
         };
 
         return (
@@ -30,7 +37,7 @@ const NavBar = React.createClass({
                         <span className= "icon-bar"></span>
                         <span className= "icon-bar"></span>
                     </button>
-                    <a style= {titleStyle} className= "navbar-brand" href= "#">Product Shop</a>
+                    <a style= {titleStyle}  className= "navbar-brand" href= "#">Product Shop</a>
                 </div>
                 <div className= "collapse navbar-collapse" id= "nav-collapse">
                     <ul className= "nav navbar-nav">{this.props.navData.map(createLinkItem)}</ul>

@@ -1,5 +1,6 @@
 import React from 'react';
 import NavItem from './NavItem.js';
+const createReactClass = require('create-react-class');
 
 
 const NavBar = createReactClass({

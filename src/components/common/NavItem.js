@@ -1,5 +1,5 @@
 import React from 'react';
-import createReactClass from 'create-react-class';
+const createReactClass = require('create-react-class');
 
 const NavItem = createReactClass({
     render: function() {

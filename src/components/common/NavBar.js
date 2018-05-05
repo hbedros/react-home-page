@@ -33,14 +33,13 @@ const NavBar = createReactClass({
         return (
             <div>
             <nav className= "navbar navbar-default">
-            <img src={logo} alt="logo" className="Header-logo" />
+                <a href= "#"><img src={logo} alt="logo" className="Header-logo" /></a>
                 <div className= "navbar-header">
                     <button type= "button" className= "navbar-toggle collapsed" data-toggle= "collapse" data-target="#nav-collapse">
                         <span className= "icon-bar"></span>
                         <span className= "icon-bar"></span>
                         <span className= "icon-bar"></span>
                     </button>
-                    <a style= {titleStyle}  className= "navbar-brand" href= "#">Product Shop</a>
                 </div>
                 <div className= "collapse navbar-collapse" id= "nav-collapse">
                     <ul className= "nav navbar-nav">{this.props.navData.map(createLinkItem)}</ul>

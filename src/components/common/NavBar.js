@@ -32,8 +32,8 @@ const NavBar = createReactClass({
 
         return (
             <div>
-            <img src={logo} alt="logo" className="Header-logo" />
             <nav className= "navbar navbar-default">
+            <img src={logo} alt="logo" className="Header-logo" />
                 <div className= "navbar-header">
                     <button type= "button" className= "navbar-toggle collapsed" data-toggle= "collapse" data-target="#nav-collapse">
                         <span className= "icon-bar"></span>

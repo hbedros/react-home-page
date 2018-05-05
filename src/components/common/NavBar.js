@@ -32,17 +32,13 @@ const NavBar = createReactClass({
 
         class NameForm extends React.Component {
             constructor(props) {
-              super(props);
               this.state = {value: ''};
             }
+
             handleChange(event) {
-                this.setState({value: event.target.value.toUpperCase()});
-            }
-
+            this.setState({value: event.target.value});
+            } 
         }
-
-       
-        
 
         return (
             <div>
@@ -58,8 +54,8 @@ const NavBar = createReactClass({
                 <div className= "collapse navbar-collapse" id= "nav-collapse">
                     <ul className= "nav navbar-nav">{this.props.navData.map(createLinkItem)}</ul>
                 </div>
-                <form>
-                 <input type="text" className="nav-search" placeholder=" Search" value={this.state.value} onChange={this.handleChange} />
+                <form onSubmit={this.handleSubmit}>
+                <input type="text" value={this.state.value} onChange={this.handleChange} />
                 </form>
             </nav>    
             </div> 

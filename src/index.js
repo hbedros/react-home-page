@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Header from './components/common/Header.js';
 import Footer from './components/common/Footer.js';
 import NavBar from './components/common/NavBar.js';
 import './index.css';
@@ -19,8 +18,8 @@ const navLinks = [
 const App = () => {
     return (
     <div>
-    <Header />
-    <NavBar bgColor= "red" titleColor= "white" linkColor= "yellow" navData= {navLinks}/>
+    {/* <Header /> */}
+    <NavBar titleColor= "white" linkColor= "white" navData= {navLinks}/>
     <Footer />
     </div>
     );

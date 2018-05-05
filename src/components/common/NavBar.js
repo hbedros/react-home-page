@@ -1,5 +1,7 @@
 import React from 'react';
 import NavItem from './NavItem.js';
+import logo from './logo.png';
+import './NavBar.css'
 const createReactClass = require('create-react-class');
 
 
@@ -12,8 +14,7 @@ const NavBar = createReactClass({
         const navStyle = {
             WebkitBoxShadow: "0 0 4px rgba(0,0,0,0.4)",
             MozBoxShadow: "0 0 4px rgba(0,0,0,0.4)",
-            boxShadow: "0 0 4px rgba(0,0,0,0.4)",
-            borderRadius: 0
+            boxShadow: "0 0 4px rgba(0,0,0,0.4)",   
         }
 
         if (this.props.bgColor)
@@ -31,6 +32,7 @@ const NavBar = createReactClass({
 
         return (
             <div>
+            <img src={logo} alt="logo" className="Header-logo" />
             <nav className= "navbar navbar-default">
                 <div className= "navbar-header">
                     <button type= "button" className= "navbar-toggle collapsed" data-toggle= "collapse" data-target="#nav-collapse">

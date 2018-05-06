@@ -1,8 +1,11 @@
 import React from 'react';
 import NavItem from './NavItem.js';
 import logo from './logo.png';
-import './NavBar.css'
+import avatar from './avatar-haig.png';
+import './NavBar.css';
+
 const createReactClass = require('create-react-class');
+
 
 
 const NavBar = createReactClass({
@@ -56,8 +59,11 @@ const NavBar = createReactClass({
                     <ul className= "nav navbar-nav">{this.props.navData.map(createLinkItem)}</ul>
                 </div>
                 <form onSubmit={this.handleSubmit}>
-                <input type="text" placeholder="search" onChange={this.handleChange} />
+                <input type="text" placeholder="Search" onChange={this.handleChange} />
                 </form>
+                <button className="right login-btn btn-default .btn-transparent dropdown-toggle navbar-btn navbar-btn-avatar" type="button" data-toggle="dropdown">
+                <img src={avatar} alt="user_pic" className="rounded-circle img-responsive" />
+                </button>
             </nav>    
             </div> 
         )

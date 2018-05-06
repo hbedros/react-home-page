@@ -32,7 +32,8 @@ const NavBar = createReactClass({
 
         class NameForm extends React.Component {
             constructor(props) {
-              this.state = {value: ''};
+                super(props);
+                this.state = {value: ''};
             }
 
             handleChange(event) {
@@ -55,7 +56,7 @@ const NavBar = createReactClass({
                     <ul className= "nav navbar-nav">{this.props.navData.map(createLinkItem)}</ul>
                 </div>
                 <form onSubmit={this.handleSubmit}>
-                <input type="text" value={this.state.value} onChange={this.handleChange} />
+                <input type="text" placeholder="search" onChange={this.handleChange} />
                 </form>
             </nav>    
             </div> 

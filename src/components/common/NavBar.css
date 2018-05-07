@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: left;
   background-color: #d9534f;
   border: transparent;
   width: 100%;
@@ -13,16 +12,17 @@
 }
 
 .Header-logo {
-  top: 10px;
-  left: 20px;
+  margin-left: 20%;
   width: 50px;
   color: aliceblue;
+  align-items: center;
   }
 
-.title {
-  float: left;
-  font-size: 50px;
-  }
+.right-nav {
+  display: flex;
+  align-items: center;
+  margin-left: 62%;
+}
 
 input {
   border: 1px solid gray;
